@@ -1,0 +1,26 @@
+<!-- +++++ Welcome Section +++++ -->
+<div id="ww">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 centered">
+        <img my-avatar email="owner.email" size="300" src="" alt="{{ owner.nickname }}" class="img-circle">
+        <h1>Hi, I am {{ owner.nickname }}!</h1>
+        <p ng-if="owner.about_me">{{ owner.about_me }}</p>
+        <my-moment ng-if="owner.last_seen" time="owner.last_seen" type="calendar"></my-moment>
+      </div><!-- /col-lg-8 -->
+    </div><!-- /row -->
+  </div> <!-- /container -->
+  <div class="container">
+    <div class="row centered">
+      <h3>MY SKILLS</h3>
+        <div ng-if="owner.skills">
+          <div ng-repeat="skill in owner.skills" class="col-lg-3 mt">
+            <canvas id="{{ skill.name }}" height="130" width="130"></canvas>
+            {{ drawSkillChart(skill) }}
+            <p>{{ skill.name }}</p>
+            <br>
+          </div>
+        </div>
+    </div><!-- /row -->
+  </div><!-- /container -->
+</div><!-- /skills -->

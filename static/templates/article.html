@@ -1,0 +1,21 @@
+  <!-- +++++ Article +++++ -->
+  <div id="white">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <p><img my-avatar email="article.author_email" size="100" src="" class="img-circle"> <ba>{{ article.author_name}}</ba></p>
+          <p><bd><my-moment time="article.create_time" type="calendar"></my-moment></bd></p>
+          <p ng-if=isAuthorized(userRoles.admin) class="text-figth">
+            <a ui-sref="edit({id: article.id})">#Edit</a>
+            <a ng-click="deleteArticle(article.id)">#DELETE</a></p>
+          </p>
+          <hr>
+          <h4>{{ article.title }}</h4>
+          <p id="post_content" ng-bind-html="article.content"></p>
+          <br>
+          <hr>
+          <p><a ng-click="goBack()"># Back</a></p>
+        </div>
+      </div><!-- /row -->
+    </div> <!-- /container -->
+  </div><!-- /white -->

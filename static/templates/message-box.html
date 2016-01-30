@@ -1,0 +1,14 @@
+<!-- messages -->
+<div ng-if="visiable">
+<div ng-repeat="message in messages">
+    <div ng-if="message.type == messageType.error" class="alert alert-info">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      {{ message.content }}
+    </div>
+
+    <div ng-if="message.type == messageType.success" class="alert alert-info">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      {{ message.content }}
+    </div>
+</div>
+</div>

@@ -1,0 +1,73 @@
+  <div id="ww">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 centered">
+          <img my-avatar email="owner.email" size="200" src="" alt="{{ owner.nickname }}" class="img-circle">
+          <h1>About {{ owner.nickname }}!</h1>
+          <p>{{ owner.about_me }}</p>
+        </div><!-- /col-lg-8 -->
+      </div><!-- /row -->
+    </div> <!-- /container -->
+  </div><!-- /ww -->
+
+  <!-- +++++ Information ection +++++ -->
+
+  <div class="container pt">
+    <div class="row mt centered">
+      <div class="col-md-4">
+        <span class="glyphicon glyphicon-book"></span>
+        <p>目前还是一名学生</p>
+      </div>
+
+      <div class="col-md-4">
+        <span class="glyphicon glyphicon-user"></span>
+        <p>本人擅长解梦、看手相、面相、测前途、婚姻。大家可以叫我神算… 哈哈哈</p>
+      </div>
+
+      <div class="col-md-4">
+        <span class="glyphicon glyphicon-star"></span>
+        <p>没有得到过值得一提的奖项π_π……</p>
+      </div>
+      </p>
+    </div><!-- /row -->
+    <div class="row mt">
+      <div class="col-lg-8">
+          <h4>The Zen of Python</h4>
+        <blockquote>
+            <p>Beautiful is better than ugly.<br>
+            Explicit is better than implicit.<br>
+            Simple is better than complex.<br>
+            Complex is better than complicated.<br>
+            Flat is better than nested.<br>
+            Sparse is better than dense.<br>
+            Readability counts.<br>
+            Special cases aren’t special enough to break the rules.<br>
+            Although practicality beats purity.<br>
+            Errors should never pass silently.<br>
+            Unless explicitly silenced.<br>
+            In the face of ambiguity, refuse the temptation to guess.<br>
+            There should be one— and preferably only one —obvious way to do it.<br>
+            Although that way may not be obvious at first unless you’re Dutch.<br>
+            Now is better than never.<br>
+            Although never is often better than <em>right</em> now.<br>
+            If the implementation is hard to explain, it’s a bad idea.<br>
+            If the implementation is easy to explain, it may be a good idea.<br>
+            Namespaces are one honking great idea<br>
+            — let’s do more of those!<br>
+            — by Tim Peters
+            </p></blockquote>
+      </div><!-- /colg-lg-6 -->
+  
+      <div class="col-md-4">
+        <h4>THE SKILLS</h4>
+        <div ng-repeat="skill in owner.skills">
+            {{skill.name}}
+            <div class="progress">
+              <div class="progress-bar progress-bar-theme" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{skill.value}}%;">
+                <span class="sr-only">60% Complete</span>
+              </div>
+            </div>
+        </div>
+      </div><!-- /col-lg-6 -->
+    </div><!-- /row -->
+  </div><!-- /container -->

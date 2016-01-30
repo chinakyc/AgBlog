@@ -1,0 +1,9 @@
+    <div class="container">
+      <form class="form-signin" name="loginForm" ng-submit="login(credentials)">
+          <h2 class="form-signin-heading">Please sign in</h2>
+          <input  class="form-control" placeholder="Email address" type="email" id="email" ng-model="credentials.email" required>
+          <input class="form-control" placeholder="password" type="password" id="password" ng-model="credentials.password" required>
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+          <p ng-show="error">{{error}}</p>
+      </form>
+    </div> <!-- /container -->

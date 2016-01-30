@@ -1,0 +1,14 @@
+<div id="grey">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2" id="nav-tabs">
+        <ul class="nav nav-tabs">
+          <li role="presentation" ><a ui-sref="blog.articles({category: 0, page: 1})">All</a></li>
+          <li ng-repeat="category in categorys" role="presentation" ><a ng-href="#/blog/{{ category.id }}/1">{{ category.name }}</a></li>
+        </ul>
+      </div>
+    </div>
+    <div ui-view></div>
+  </div> <!-- /container -->
+</div><!-- /grey -->
+    

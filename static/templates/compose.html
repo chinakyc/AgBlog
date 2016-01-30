@@ -1,0 +1,17 @@
+<!-- +++++ Post +++++ -->
+<div id='grey'>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+          <form name="composeForm" class="well" ng-submit="submit(article)">
+          <input  class="form-control" placeholder="title" ng-model="article.title" required>
+          <div id="editormd">
+              <textarea class="form-control" rows="30" ng-model="article.markdown" style="display:none;" required></textarea>
+          </div>
+          <input ng-if="Compose" class="form-control" placeholder="category" ng-model="article.category" required>
+          <button type="submit" class="btn btn-success">SUBMIT</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="row" id="article-list">
+  <div ng-repeat="article in articles">
+  <div class="col-lg-8 col-lg-offset-2">
+    <p><img my-avatar email="article.author_email" size="70" src="" alt="{{ article.author_name }}" class="img-circle"/>{{ article.author_name }}</ba></p>
+    <my-moment time="article.create_time" type="calendar"></my-moment>
+    <h2>{{ article.title }}</h2>
+    {{ article.content | htmlToPlaintext }}
+    <!-->https://github.com/angular-ui/ui-router/wiki/Nested-States-and-Nested-Views  ng-href <!-->
+    <p><a ng-href="#/article/{{article.id}}">Continue Reading...</a></p>   
+    <hr>
+  </div>
+  </div><!-- /ng-repate -->
+</div><!-- /row -->
+<my-pagination></my-pagination>
