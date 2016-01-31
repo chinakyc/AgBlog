@@ -1,5 +1,5 @@
 // main application module
-var blogApp = angular.module("blogApp", ["ui.router"])
+var blogApp = angular.module("blogApp", ["ui.router", "angular-loading-bar", "ngAnimate"])
 // Constants use for login 
 .constant("USER_ROLES", {
     guest: 2,
